@@ -1,4 +1,5 @@
-import mongoose from 'mongoose'
+/* eslint-disable */
+import * as mongoose from 'mongoose';
 
 interface ITodo {
   title: string;
@@ -21,18 +22,12 @@ const todoSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 
-todoSchema.statics.build = (attr: ITodo) => {
-  return new Todo(attr)
-}
+todoSchema.statics.build = (attr: ITodo) => new Todo(attr);
 
-const Todo = mongoose.model<TodoDoc, todoModelInterface>('Todo', todoSchema)
+const Todo = mongoose.model<TodoDoc, todoModelInterface>('Todo', todoSchema);
 
-export { Todo }
-
-
-
-
+export default Todo;
