@@ -11,5 +11,6 @@
     "sourceMap": true,
     "experimentalDecorators": true,
     "suppressImplicitAnyIndexErrors": true,
+    "esModuleInterop": true
   }
 }

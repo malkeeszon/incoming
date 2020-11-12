@@ -1,4 +1,5 @@
 export default function NotEmpty() {
+  // eslint-disable-next-line func-names
   return function (target: any, key: string): void {
     let value: string = target[key];
     const setter = (next: string) => {
