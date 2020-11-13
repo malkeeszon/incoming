@@ -24,6 +24,21 @@ const todoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+
+  deadline: {
+    type: String,
+    required: true,
+  },
+
+  notifyWhenDone: {
+    type: String,
+    required: true,
+  },
+
+  author: {
+    type: String,
+    required: true,
+  },
 });
 
 todoSchema.statics.build = (attr: ITodo) => new Todo(attr);
