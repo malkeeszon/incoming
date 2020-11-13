@@ -2,6 +2,7 @@ export default function IsLength(min: number, max: number) {
   // eslint-disable-next-line func-names
   return function (target: any, key: string): void {
     let value: string = target[key];
+
     const setter = (next: string) => {
       if (next.length < min || next.length > max) {
         // eslint-disable-next-line no-console

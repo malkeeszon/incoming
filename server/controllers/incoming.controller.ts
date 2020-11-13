@@ -4,19 +4,19 @@ import {
 } from '../../decorators/index';
 
 export default class Incoming {
-  @IsLength(4, 10)
+  // @IsLength(4, 10)
   title: string
 
   @IsLength(10, 30)
   description: string
 
-  @IsDate()
+  // @IsDate()
   deadline: string
 
-  @IsEmail()
+  // @IsEmail()
   notifyWhenDone: string
 
-  @Contains('Rafal')
+  // @Contains('Rafal')
   author: string
 
   constructor(title: string, description: string, deadline: string, notifyWhenDone: string, author: string) {

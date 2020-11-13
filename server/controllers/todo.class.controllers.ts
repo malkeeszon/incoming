@@ -21,7 +21,7 @@ export default class Controllers {
         author: incoming.author,
       };
 
-      const result = await Todo.create(validated);
+      const result = await Todo.create(incoming);
       res.status(201).send(result);
 
     } catch (error) {
