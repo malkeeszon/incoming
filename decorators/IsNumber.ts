@@ -5,7 +5,7 @@ export default function IsNumber() {
     const setter = (next: string) => {
       if (typeof next !== 'number') {
         // eslint-disable-next-line no-console
-        console.log(`Validation Error on property: "${key}" - should be of type Number`);
+        console.log(`\x1b[91mIncoming object validation Error\x1b[39m on property: "${key}" - should be of type Number`);
       } else {
         value = next;
       }

@@ -7,7 +7,7 @@ export default function IsEmail() {
       const regex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
       if (!regex.test(next)) {
         // eslint-disable-next-line no-console
-        console.log(`Validation Error on property: "${key}" - recevied: "${next}" - expected: "example@email.com"`);
+        console.log(`\x1b[91mIncoming object validation Error:\x1b[39m property: "${key}" - recevied: "${next}" - expected: "example@email.com"`);
       } else {
         value = next;
       }

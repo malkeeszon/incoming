@@ -5,7 +5,7 @@ export default function Contains(word: string) {
     const setter = (next: string) => {
       if (!next.includes(word)) {
         // eslint-disable-next-line no-console
-        console.log(`Validation Error on property: "${key}" - should contain "${word}"`);
+        console.log(`\x1b[91mIncoming object validation Error:\x1b[39m property: "${key}" - should contain "${word}"`);
       } else {
         value = next;
       }

@@ -5,7 +5,7 @@ export default function IsDate() {
     const setter = (next: string) => {
       if (Number.isNaN(new Date(next).getDate())) {
         // eslint-disable-next-line no-console
-        console.log(`Validation Error on property: "${key}" - invalid date format`);
+        console.log(`\x1b[91mIncoming object validation Error:\x1b[39m property: "${key}" - invalid date format`);
       } else {
         value = next;
       }

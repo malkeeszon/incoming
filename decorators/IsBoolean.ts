@@ -5,7 +5,7 @@ export default function IsBoolean() {
     const setter = (next: string) => {
       if (next !== 'true' && next !== 'false') {
         // eslint-disable-next-line no-console
-        console.log(`Validation Error on property: "${key}" - should be Boolean`);
+        console.log(`\x1b[91mIncoming object validation Error\x1b[39m property: "${key}" - should be Boolean`);
       } else {
         value = next;
       }
