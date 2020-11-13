@@ -14,7 +14,8 @@ mongoose.connect('mongodb://localhost:27017/test-todo', {
   useCreateIndex: true,
   useUnifiedTopology: true,
 }, () => {
-  console.log('Connected to database ✅');
+
+  console.log('Connected to database ✅' );
 });
 
 app.listen(3000, () => {
