@@ -1,7 +1,3 @@
-/* eslint-disable */
-
-
-
 function makePropertyMapper<T>(prototype: any, key: string, mapper: (value: any) => T) {
   const values = new Map<any, T>();
   Object.defineProperty(prototype, key, {
@@ -44,36 +40,3 @@ const example = new Example(2);
 
 console.log(example); // 9
 console.log(Object.values(example)); // true
-
-//------------------------------------------------------------
-//------------------------------------------------------------
-//------------------------------------------------------------
-
-import { Request, Response } from 'express';
-import Todo from '../models/todo';
-import Incoming from './incoming.controller';
-
-export default class Controllers {
-  async newItem(req: Request, res: Response): Promise<any> {
-    try {
-
-      const {
-        withInitializer
-      } = req.body;
-
-      const example = new Example(withInitializer);
-
-      const result = await Todo.create(example);
-      res.status(201).send(result);
-
-    } catch (error) {
-      console.log(error);
-      res.status(500).send('Error while creating element');
-    }
-  }
-
-  async showAll(req: Request, res: Response): Promise<any> {
-    const result = await Todo.find();
-    res.status(200).send(result);
-  }
-}
